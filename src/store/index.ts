@@ -1,7 +1,9 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-import * as numeron from './numeron';
+import * as numeron from '../numeron';
+
+Vue.use(Vuex)
 
 export interface Guess {
   value: string;
@@ -16,8 +18,6 @@ interface State {
   level: number;
   selectedNumbers: string[];
 }
-
-Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
@@ -99,4 +99,6 @@ export default new Vuex.Store({
       }
     },
   },
-});
+  modules: {
+  }
+})
